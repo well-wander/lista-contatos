@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 import Contato from './components/Contato'
 import Formulario from './components/Formulario'
 import type { RootState } from './store'
-import { Container, EstiloGlobal, Lista, Subtitulo } from './styles'
+import { Container, EstiloGlobal, Lista } from './styles'
 
 function App() {
   const contatos = useSelector((state: RootState) => state.contatos)
@@ -10,8 +10,7 @@ function App() {
   return (
     <Container>
       <EstiloGlobal />
-      <h1>Lista de contatos das garotas</h1>
-      <Subtitulo>Direto de Bel-Air, sem o tio Phil saber.</Subtitulo>
+      <h1>Lista de contatos</h1>
       <Formulario />
       <Lista>
         {contatos.map((contato) => (

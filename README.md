@@ -1,4 +1,4 @@
-# Lista de contatos das garotas
+# Lista de contatos
 
 Exercício do curso Engenheiro Front-End da EBAC: lista de contatos com adição, edição e remoção, com visual inspirado em "Um Maluco no Pedaço".
 

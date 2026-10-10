@@ -31,6 +31,7 @@ export const Container = styled.main`
   padding: 32px 16px;
 
   h1 {
+    margin-bottom: 24px;
     font-family: 'Permanent Marker', cursive;
     font-size: 40px;
     line-height: 1.1;
@@ -38,12 +39,6 @@ export const Container = styled.main`
     text-shadow: 3px 3px 0 ${cores.preto};
     transform: rotate(-2deg);
   }
-`
-
-export const Subtitulo = styled.p`
-  margin: 12px 0 24px;
-  font-weight: bold;
-  color: ${cores.roxo};
 `
 
 export const Form = styled.form`
