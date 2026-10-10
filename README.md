@@ -1,6 +1,6 @@
-# Lista de contatos
+# Lista de contatos das garotas
 
-Exercício do curso Engenheiro Front-End da EBAC: lista de contatos com adição, edição e remoção.
+Exercício do curso Engenheiro Front-End da EBAC: lista de contatos com adição, edição e remoção, com visual inspirado em "Um Maluco no Pedaço".
 
 - **React** + TypeScript (Vite)
 - **Redux Toolkit** para a gestão dos dados
