@@ -8,6 +8,14 @@ type Props = {
   aoConcluir?: () => void
 }
 
+// Formata como (11) 91234-5678 ou (11) 1234-5678 enquanto a pessoa digita
+const mascararTelefone = (valor: string) =>
+  valor
+    .replace(/\D/g, '')
+    .slice(0, 11)
+    .replace(/^(\d{2})(\d)/, '($1) $2')
+    .replace(/(\d{4,5})(\d{4})$/, '$1-$2')
+
 // Sem `contato` adiciona um novo; com `contato` edita o existente
 const Formulario = ({ contato, aoConcluir }: Props) => {
   const dispatch = useDispatch()
@@ -45,14 +53,18 @@ const Formulario = ({ contato, aoConcluir }: Props) => {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="E-mail"
         aria-label="E-mail"
+        pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+        title="Informe um e-mail válido, como nome@exemplo.com"
         required
       />
       <Campo
         type="tel"
         value={telefone}
-        onChange={(e) => setTelefone(e.target.value)}
+        onChange={(e) => setTelefone(mascararTelefone(e.target.value))}
         placeholder="Telefone"
         aria-label="Telefone"
+        pattern="\(\d{2}\) \d{4,5}-\d{4}"
+        title="Informe o DDD e o número, como (11) 91234-5678"
         required
       />
       <Botao type="submit">{contato ? 'Salvar' : 'Adicionar'}</Botao>

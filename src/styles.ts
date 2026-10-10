@@ -66,6 +66,13 @@ export const Botao = styled.button`
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s, background-color 0.1s;
+
+  &:hover {
+    background-color: ${cores.rosa};
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 ${cores.preto};
+  }
 
   &:active {
     transform: translate(3px, 3px);
